@@ -1,0 +1,16 @@
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\bin\Debug\net9.0\GroupExpenseManager.Application.deps.json
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\bin\Debug\net9.0\GroupExpenseManager.Application.dll
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\bin\Debug\net9.0\GroupExpenseManager.Application.pdb
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\bin\Debug\net9.0\GroupExpenseManager.Domain.dll
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\bin\Debug\net9.0\GroupExpenseManager.Domain.pdb
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\GroupExpenseManager.Application.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\GroupExpenseManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\GroupExpenseManager.Application.AssemblyInfoInputs.cache
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\GroupExpenseManager.Application.AssemblyInfo.cs
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\GroupExpenseManager.Application.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\GroupExpenseManager.Application.sourcelink.json
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\GroupExp.C0767197.Up2Date
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\GroupExpenseManager.Application.dll
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\refint\GroupExpenseManager.Application.dll
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\GroupExpenseManager.Application.pdb
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Application\obj\Debug\net9.0\ref\GroupExpenseManager.Application.dll

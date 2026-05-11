@@ -1,0 +1,12 @@
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\bin\Debug\net9.0\GroupExpenseManager.Domain.deps.json
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\bin\Debug\net9.0\GroupExpenseManager.Domain.dll
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\bin\Debug\net9.0\GroupExpenseManager.Domain.pdb
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\obj\Debug\net9.0\GroupExpenseManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\obj\Debug\net9.0\GroupExpenseManager.Domain.AssemblyInfoInputs.cache
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\obj\Debug\net9.0\GroupExpenseManager.Domain.AssemblyInfo.cs
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\obj\Debug\net9.0\GroupExpenseManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\obj\Debug\net9.0\GroupExpenseManager.Domain.sourcelink.json
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\obj\Debug\net9.0\GroupExpenseManager.Domain.dll
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\obj\Debug\net9.0\refint\GroupExpenseManager.Domain.dll
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\obj\Debug\net9.0\GroupExpenseManager.Domain.pdb
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Domain\obj\Debug\net9.0\ref\GroupExpenseManager.Domain.dll

@@ -1,0 +1,16 @@
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Api\wwwroot\groups.html
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Api\wwwroot\index.html
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Api\wwwroot\js\users.js
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Api\wwwroot\settlements.html
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Api\wwwroot\users.html
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Api\wwwroot\js\app.js
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Api\wwwroot\js\settlements.js
+C:\Users\acer\source\repos\ChiTieu\GroupExpenseManager.Api\wwwroot\js\groups.js
+wwwroot\groups.html
+wwwroot\index.html
+wwwroot\js\app.js
+wwwroot\js\groups.js
+wwwroot\js\settlements.js
+wwwroot\js\users.js
+wwwroot\settlements.html
+wwwroot\users.html
