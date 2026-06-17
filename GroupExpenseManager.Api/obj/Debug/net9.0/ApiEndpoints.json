@@ -27,7 +27,7 @@
   },
   {
     "ContainingType": "GroupExpenseManager.Api.Controllers.ExpensesController",
-    "Method": "GetByDate",
+    "Method": "Get",
     "RelativePath": "api/Expenses",
     "HttpMethod": "GET",
     "IsController": true,
@@ -40,7 +40,7 @@
       },
       {
         "Name": "date",
-        "Type": "System.DateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],
@@ -68,6 +68,22 @@
         "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GroupExpenseManager.Api.Controllers.ExpensesController",
+    "Method": "SettleAll",
+    "RelativePath": "api/Expenses/settle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "groupId",
+        "Type": "System.Guid",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

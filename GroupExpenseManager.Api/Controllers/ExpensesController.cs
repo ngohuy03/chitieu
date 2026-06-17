@@ -25,9 +25,9 @@ namespace GroupExpenseManager.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ExpenseDto>>> GetByDate([FromQuery] Guid groupId, [FromQuery] DateTime date)
+        public async Task<ActionResult<List<ExpenseDto>>> Get([FromQuery] Guid groupId, [FromQuery] DateTime? date)
         {
-            var result = await _expenseAppService.GetExpensesByDateAsync(groupId, date);
+            var result = await _expenseAppService.GetExpensesAsync(groupId, date);
             return Ok(result);
         }
 
@@ -36,6 +36,13 @@ namespace GroupExpenseManager.Api.Controllers
         {
             var result = await _expenseAppService.GetSettlementsAsync(groupId);
             return Ok(result);
+        }
+
+        [HttpPost("settle")]
+        public async Task<ActionResult> SettleAll([FromQuery] Guid groupId)
+        {
+            await _expenseAppService.SettleAllExpensesAsync(groupId);
+            return Ok();
         }
 
         [HttpDelete("{id}")]

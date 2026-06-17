@@ -7,9 +7,10 @@ namespace GroupExpenseManager.Application.Expenses
     public interface IExpenseAppService
     {
         Task<Guid> CreateExpenseAsync(CreateExpenseDto dto);
-        Task<List<ExpenseDto>> GetExpensesByDateAsync(Guid groupId, DateTime date);
+        Task<List<ExpenseDto>> GetExpensesAsync(Guid groupId, DateTime? date = null);
         Task DeleteExpenseAsync(Guid id);
         Task<List<SettlementDto>> GetSettlementsAsync(Guid groupId);
+        Task SettleAllExpensesAsync(Guid groupId);
     }
 
     public class CreateExpenseDto
@@ -20,8 +21,13 @@ namespace GroupExpenseManager.Application.Expenses
         public Guid GroupId { get; set; }
         public Guid PaidById { get; set; }
         
-        // List of user IDs who participated in this expense
-        public List<Guid> ParticipantIds { get; set; } = new List<Guid>();
+        public List<CreateExpenseSplitDto> Splits { get; set; } = new List<CreateExpenseSplitDto>();
+    }
+
+    public class CreateExpenseSplitDto
+    {
+        public Guid UserId { get; set; }
+        public decimal OwedAmount { get; set; }
     }
 
     public class ExpenseDto

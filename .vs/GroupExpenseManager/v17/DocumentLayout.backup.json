@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\acer\\source\\repos\\ChiTieu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F7947C7-24EF-4E49-9780-224A45BCF5D2}|GroupExpenseManager.Application\\GroupExpenseManager.Application.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.application\\expenses\\expenseappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F7947C7-24EF-4E49-9780-224A45BCF5D2}|GroupExpenseManager.Application\\GroupExpenseManager.Application.csproj|solutionrelative:groupexpensemanager.application\\expenses\\expenseappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.domain\\entities\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|solutionrelative:groupexpensemanager.domain\\entities\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D31B0770-E2B5-4B0E-97D6-2367E496BDE2}|GroupExpenseManager.Api\\GroupExpenseManager.Api.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.api\\wwwroot\\js\\groups.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{D31B0770-E2B5-4B0E-97D6-2367E496BDE2}|GroupExpenseManager.Api\\GroupExpenseManager.Api.csproj|solutionrelative:groupexpensemanager.api\\wwwroot\\js\\groups.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.domain\\entities\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|solutionrelative:groupexpensemanager.domain\\entities\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|solutionrelative:groupexpensemanager.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.infrastructure\\migrations\\20260510023015_addisdeletetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|solutionrelative:groupexpensemanager.infrastructure\\migrations\\20260510023015_addisdeletetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.infrastructure\\migrations\\20260509124829_updategroupentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|solutionrelative:groupexpensemanager.infrastructure\\migrations\\20260509124829_updategroupentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.infrastructure\\migrations\\20260509121636_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|solutionrelative:groupexpensemanager.infrastructure\\migrations\\20260509121636_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.domain\\entities\\expensesplit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|solutionrelative:groupexpensemanager.domain\\entities\\expensesplit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31B0770-E2B5-4B0E-97D6-2367E496BDE2}|GroupExpenseManager.Api\\GroupExpenseManager.Api.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D31B0770-E2B5-4B0E-97D6-2367E496BDE2}|GroupExpenseManager.Api\\GroupExpenseManager.Api.csproj|solutionrelative:groupexpensemanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7947C7-24EF-4E49-9780-224A45BCF5D2}|GroupExpenseManager.Application\\GroupExpenseManager.Application.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.application\\expenses\\expenseappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7947C7-24EF-4E49-9780-224A45BCF5D2}|GroupExpenseManager.Application\\GroupExpenseManager.Application.csproj|solutionrelative:groupexpensemanager.application\\expenses\\expenseappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F7947C7-24EF-4E49-9780-224A45BCF5D2}|GroupExpenseManager.Application\\GroupExpenseManager.Application.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.application\\groups\\groupappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{6F7947C7-24EF-4E49-9780-224A45BCF5D2}|GroupExpenseManager.Application\\GroupExpenseManager.Application.csproj|solutionrelative:groupexpensemanager.application\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D31B0770-E2B5-4B0E-97D6-2367E496BDE2}|GroupExpenseManager.Api\\GroupExpenseManager.Api.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D31B0770-E2B5-4B0E-97D6-2367E496BDE2}|GroupExpenseManager.Api\\GroupExpenseManager.Api.csproj|solutionrelative:groupexpensemanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509121333_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GroupExpenseManager.Infrastructure\\Migrations\\20260509121333_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,8 +55,8 @@
       "RelativeMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|solutionrelative:groupexpensemanager.infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.infrastructure\\migrations\\20260509121636_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|solutionrelative:groupexpensemanager.infrastructure\\migrations\\20260509121636_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D31B0770-E2B5-4B0E-97D6-2367E496BDE2}|GroupExpenseManager.Api\\GroupExpenseManager.Api.csproj|c:\\users\\acer\\source\\repos\\chitieu\\groupexpensemanager.api\\wwwroot\\js\\groups.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D31B0770-E2B5-4B0E-97D6-2367E496BDE2}|GroupExpenseManager.Api\\GroupExpenseManager.Api.csproj|solutionrelative:groupexpensemanager.api\\wwwroot\\js\\groups.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,36 +66,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExpenseAppService.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
-              "RelativeDocumentMoniker": "GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
-              "RelativeToolTip": "GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAowGwAAAApAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "20260510023015_AddIsDeleteToUser.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260510023015_AddIsDeleteToUser.cs",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Migrations\\20260510023015_AddIsDeleteToUser.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260510023015_AddIsDeleteToUser.cs",
+              "RelativeToolTip": "GroupExpenseManager.Infrastructure\\Migrations\\20260510023015_AddIsDeleteToUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T03:39:00.32Z",
+              "WhenOpened": "2026-05-12T12:14:34.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260509124829_UpdateGroupEntity.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509124829_UpdateGroupEntity.cs",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Migrations\\20260509124829_UpdateGroupEntity.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509124829_UpdateGroupEntity.cs",
+              "RelativeToolTip": "GroupExpenseManager.Infrastructure\\Migrations\\20260509124829_UpdateGroupEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:14:33.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\Expense.cs",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Domain\\Entities\\Expense.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\Expense.cs",
+              "RelativeToolTip": "GroupExpenseManager.Domain\\Entities\\Expense.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:14:21.083Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "groups.js",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
-              "RelativeDocumentMoniker": "GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
-              "RelativeToolTip": "GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAwDMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-05-10T02:43:55.99Z"
+              "Title": "Group.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\Group.cs",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Domain\\Entities\\Group.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\Group.cs",
+              "RelativeToolTip": "GroupExpenseManager.Domain\\Entities\\Group.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wBoAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:14:20.321Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "GroupExpenseManager.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:14:19.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ExpenseSplit.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\ExpenseSplit.cs",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Domain\\Entities\\ExpenseSplit.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\ExpenseSplit.cs",
+              "RelativeToolTip": "GroupExpenseManager.Domain\\Entities\\ExpenseSplit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:14:16.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "GroupAppService.cs",
               "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Application\\Groups\\GroupAppService.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Application\\Groups\\GroupAppService.cs",
@@ -83,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "IApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Application\\Interfaces\\IApplicationDbContext.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Application\\Interfaces\\IApplicationDbContext.cs",
@@ -95,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "20260509121636_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509121636_InitialCreate.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Migrations\\20260509121636_InitialCreate.cs",
@@ -107,7 +179,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
+              "Title": "ExpenseAppService.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
+              "RelativeToolTip": "GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAowHMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T03:39:00.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "20260509121333_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509121333_InitialCreate.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Migrations\\20260509121333_InitialCreate.cs",
@@ -119,19 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeToolTip": "GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T12:06:23.131Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Api\\appsettings.json",
               "RelativeDocumentMoniker": "GroupExpenseManager.Api\\appsettings.json",
@@ -140,6 +212,30 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-05-09T12:02:11.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "groups.js",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
+              "RelativeToolTip": "GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAwDMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-10T02:43:55.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T12:06:23.131Z"
             }
           ]
         }

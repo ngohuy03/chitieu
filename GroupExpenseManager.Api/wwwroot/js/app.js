@@ -5,8 +5,8 @@ let currentGroupId = ""; // Should be set when a group is selected
 const apiUrl = "/api/expenses";
 let currentItems = []; // Store items for the current expense session
 
-// Set default date to today
-document.getElementById('expenseDate').valueAsDate = new Date();
+// Default to showing all expenses (date empty)
+// document.getElementById('expenseDate').valueAsDate = new Date();
 
 // Load data on start
 document.addEventListener('DOMContentLoaded', () => {
@@ -85,7 +85,12 @@ function loadExpenses() {
 
     tableBody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Đang tải dữ liệu...</td></tr>`;
 
-    fetch(`${apiUrl}?groupId=${currentGroupId}&date=${date}`)
+    let url = `${apiUrl}?groupId=${currentGroupId}`;
+    if (date) {
+        url += `&date=${date}`;
+    }
+
+    fetch(url)
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
@@ -107,10 +112,20 @@ function renderExpenses(expenses) {
         return;
     }
 
+    // Sắp xếp theo ngày mới nhất
+    expenses.sort((a, b) => new Date(b.date) - new Date(a.date));
+
     tableBody.innerHTML = expenses.map(exp => {
         // Tạo chuỗi hiển thị chi tiết chia tiền
         const splitsHtml = exp.splits && exp.splits.length > 0
-            ? exp.splits.map(s => `<span class="chip">${s.userName}: ${formatMoney(s.owedAmount)}</span>`).join(' ')
+            ? `<div style="display: flex; flex-wrap: wrap; gap: 6px;">` + 
+              exp.splits.map(s => `
+                <span class="chip" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #e2e8f0; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem;">
+                    <span style="font-weight: 500; color: #94a3b8;">${s.userName}:</span>
+                    <span style="color: #38bdf8; font-weight: 600;">${formatMoney(s.owedAmount)}</span>
+                </span>
+              `).join('') +
+              `</div>`
             : '<span style="color: var(--text-muted);">Chưa chia</span>';
 
         // Sử dụng toLocaleString để hiển thị cả ngày và giờ
@@ -122,19 +137,45 @@ function renderExpenses(expenses) {
             minute: '2-digit'
         });
 
+        let titleHtml = `<div style="font-weight: 600; color: #f8fafc;">${exp.title}</div>`;
+        try {
+            const items = JSON.parse(exp.title);
+            if (Array.isArray(items)) {
+                titleHtml = `
+                    <div style="background: rgba(0,0,0,0.1); padding: 8px; border-radius: 6px;">
+                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">Danh sách đồ:</div>
+                        <ul style="margin: 0; padding-left: 15px; font-size: 0.85rem; color: #f8fafc;">
+                            ${items.map(item => `<li>${item.name} (${formatMoney(item.price)})</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+        } catch (e) {
+            // Not JSON, use as is
+        }
+
         return `
             <tr>
-                <td>
-                    <div>${exp.title}</div>
-                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
+                <td style="padding: 16px;">
+                    ${titleHtml}
+                    <div style="font-size: 0.75rem; color: #64748b; margin-top: 4px; display: flex; align-items: center; gap: 4px;">
                         <i class="fa-regular fa-clock"></i> ${dateTimeStr}
                     </div>
                 </td>
-                <td><span class="chip" style="background: rgba(99, 102, 241, 0.2);">${exp.paidByName || 'N/A'}</span></td>
-                <td><span class="amount">${formatMoney(exp.amount)}</span></td>
-                <td>${splitsHtml}</td>
-                <td>
-                    <button class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #ef4444;" onclick="deleteExpense('${exp.id}')">
+                <td style="padding: 16px;">
+                    <span class="chip" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.2); color: #818cf8; font-weight: 500; padding: 4px 10px; border-radius: 12px; display: inline-flex; align-items: center; gap: 4px;">
+                        <i class="fa-solid fa-user" style="font-size: 0.7rem;"></i>${exp.paidByName || 'N/A'}
+                    </span>
+                </td>
+                <td style="padding: 16px;">
+                    <span style="font-weight: 700; color: #10b981; font-size: 1.1rem;">${formatMoney(exp.amount)}</span>
+                </td>
+                <td style="padding: 16px;">${splitsHtml}</td>
+                <td style="padding: 16px;">
+                    <button class="btn" style="padding: 6px 10px; font-size: 0.8rem; background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 8px; transition: all 0.2s;" 
+                            onmouseover="this.style.background='rgba(239, 68, 68, 0.2)'" 
+                            onmouseout="this.style.background='rgba(239, 68, 68, 0.1)'"
+                            onclick="deleteExpense('${exp.id}')">
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </td>
@@ -181,43 +222,71 @@ function saveExpense() {
         return;
     }
 
+    if (!currentGroupId) {
+        alert('Vui lòng chọn nhóm!');
+        return;
+    }
+
     // Lấy giờ hiện tại để lưu cùng ngày
     const now = new Date();
-    const selectedDate = new Date(date);
-    selectedDate.setHours(now.getHours(), now.getMinutes(), now.getSeconds());
+    let selectedDate;
+    
+    if (date) {
+        selectedDate = new Date(date);
+        selectedDate.setHours(now.getHours(), now.getMinutes(), now.getSeconds());
+    } else {
+        selectedDate = new Date(); // Fallback to now if no date selected
+    }
 
-    // Create expenses sequentially or in parallel
-    const promises = currentItems.map(item => {
-        const dto = {
-            title: item.name,
-            amount: item.price,
-            date: selectedDate.toISOString(),
-            groupId: currentGroupId,
-            paidById: paidById,
-            participantIds: item.participantIds
-        };
+    // Lấy chuỗi thời gian theo giờ địa phương (không có chữ Z ở cuối)
+    const tzoffset = selectedDate.getTimezoneOffset() * 60000;
+    const localDateStr = (new Date(selectedDate - tzoffset)).toISOString().slice(0, -1);
 
-        return fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dto)
+    // Tính toán tổng tiền và chia tiền
+    let totalAmount = 0;
+    const userSplits = {};
+
+    currentItems.forEach(item => {
+        totalAmount += item.price;
+        const share = item.price / item.participantIds.length;
+        item.participantIds.forEach(userId => {
+            if (!userSplits[userId]) {
+                userSplits[userId] = 0;
+            }
+            userSplits[userId] += share;
         });
     });
 
-    Promise.all(promises)
-        .then(responses => {
-            const allOk = responses.every(r => r.ok);
-            if (allOk) {
-                closeModal();
-                loadExpenses();
-            } else {
-                alert('Một số khoản chi lưu thất bại!');
-                loadExpenses(); // Reload anyway to see what was saved
-            }
-        })
-        .catch(error => console.error('Error saving expenses:', error));
+    const splitsList = Object.keys(userSplits).map(userId => ({
+        userId: userId,
+        owedAmount: userSplits[userId]
+    }));
+
+    const dto = {
+        title: JSON.stringify(currentItems),
+        amount: totalAmount,
+        date: localDateStr,
+        groupId: currentGroupId,
+        paidById: paidById,
+        splits: splitsList
+    };
+
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dto)
+    })
+    .then(response => {
+        if (response.ok) {
+            closeModal();
+            loadExpenses();
+        } else {
+            alert('Lưu thất bại!');
+        }
+    })
+    .catch(error => console.error('Error saving expense:', error));
 }
 
 // New functions for item management

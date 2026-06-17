@@ -19,12 +19,10 @@ namespace GroupExpenseManager.Application.Expenses
 
         public async Task<Guid> CreateExpenseAsync(CreateExpenseDto dto)
         {
-            if (dto.ParticipantIds == null || dto.ParticipantIds.Count == 0)
+            if (dto.Splits == null || dto.Splits.Count == 0)
             {
                 throw new Exception("Phải có ít nhất một người tham gia để chia tiền.");
             }
-
-            decimal owedAmount = dto.Amount / dto.ParticipantIds.Count;
 
             var entity = new Expense
             {
@@ -33,10 +31,10 @@ namespace GroupExpenseManager.Application.Expenses
                 Date = dto.Date,
                 GroupId = dto.GroupId,
                 PaidById = dto.PaidById,
-                Splits = dto.ParticipantIds.Select(userId => new ExpenseSplit
+                Splits = dto.Splits.Select(s => new ExpenseSplit
                 {
-                    UserId = userId,
-                    OwedAmount = owedAmount
+                    UserId = s.UserId,
+                    OwedAmount = s.OwedAmount
                 }).ToList()
             };
 
@@ -46,14 +44,21 @@ namespace GroupExpenseManager.Application.Expenses
             return entity.Id;
         }
 
-        public async Task<List<ExpenseDto>> GetExpensesByDateAsync(Guid groupId, DateTime date)
+        public async Task<List<ExpenseDto>> GetExpensesAsync(Guid groupId, DateTime? date = null)
         {
-            return await _context.Expenses
+            var query = _context.Expenses
                 .AsNoTracking()
                 .Include(x => x.PaidBy)
                 .Include(x => x.Splits)
                     .ThenInclude(s => s.User)
-                .Where(x => x.GroupId == groupId && x.Date.Date == date.Date)
+                .Where(x => x.GroupId == groupId);
+
+            if (date.HasValue)
+            {
+                query = query.Where(x => x.Date.Date == date.Value.Date);
+            }
+
+            return await query
                 .Select(x => new ExpenseDto
                 {
                     Id = x.Id,
@@ -100,62 +105,104 @@ namespace GroupExpenseManager.Application.Expenses
             var expenses = await _context.Expenses
                 .AsNoTracking()
                 .Include(x => x.Splits)
-                .Where(x => x.GroupId == groupId)
+                .Where(x => x.GroupId == groupId && !x.IsSettled)
                 .ToListAsync();
 
-            // 3. Tính toán số dư ròng (Net Balance)
-            var balances = new Dictionary<Guid, decimal>();
+            // 3. Tính toán nợ trực tiếp giữa các cặp (Pairwise Debts)
+            var debts = new Dictionary<Guid, Dictionary<Guid, decimal>>();
 
             foreach (var exp in expenses)
             {
-                // Chỉ tính tiền trả nếu người trả chưa bị xóa
-                if (exp.PaidById != Guid.Empty && activeUserIds.Contains(exp.PaidById))
-                {
-                    if (!balances.ContainsKey(exp.PaidById)) balances[exp.PaidById] = 0;
-                    balances[exp.PaidById] += exp.Amount;
-                }
+                Guid payerId = exp.PaidById;
+                if (payerId == Guid.Empty || !activeUserIds.Contains(payerId)) continue;
 
                 foreach (var split in exp.Splits)
                 {
-                    // Chỉ tính tiền nợ nếu người ăn chưa bị xóa
-                    if (activeUserIds.Contains(split.UserId))
+                    Guid debtorId = split.UserId;
+                    if (!activeUserIds.Contains(debtorId)) continue;
+                    if (debtorId == payerId) continue; // Không tự nợ chính mình
+
+                    if (!debts.ContainsKey(debtorId))
                     {
-                        if (!balances.ContainsKey(split.UserId)) balances[split.UserId] = 0;
-                        balances[split.UserId] -= split.OwedAmount;
+                        debts[debtorId] = new Dictionary<Guid, decimal>();
                     }
+
+                    if (!debts[debtorId].ContainsKey(payerId))
+                    {
+                        debts[debtorId][payerId] = 0;
+                    }
+
+                    debts[debtorId][payerId] += split.OwedAmount;
                 }
             }
 
-            // 4. Tách ra người nợ (âm) và người chủ nợ (dương)
-            var debtors = balances.Where(x => x.Value < -0.01m).Select(x => new { Id = x.Key, Amount = -x.Value }).ToList();
-            var creditors = balances.Where(x => x.Value > 0.01m).Select(x => new { Id = x.Key, Amount = x.Value }).ToList();
-
+            // 4. Cấn trừ nợ giữa các cặp (A nợ B vs B nợ A)
             var settlements = new List<SettlementDto>();
+            var processedPairs = new HashSet<(Guid, Guid)>();
 
-            int dIdx = 0, cIdx = 0;
-            var dList = debtors.Select(x => x.Amount).ToList();
-            var cList = creditors.Select(x => x.Amount).ToList();
-
-            // 5. Khớp nợ
-            while (dIdx < dList.Count && cIdx < cList.Count)
+            foreach (var debtorId in debts.Keys.ToList())
             {
-                decimal amount = Math.Min(dList[dIdx], cList[cIdx]);
-
-                settlements.Add(new SettlementDto
+                foreach (var creditorId in debts[debtorId].Keys.ToList())
                 {
-                    FromUserName = activeUsers.ContainsKey(debtors[dIdx].Id) ? activeUsers[debtors[dIdx].Id] : "N/A",
-                    ToUserName = activeUsers.ContainsKey(creditors[cIdx].Id) ? activeUsers[creditors[cIdx].Id] : "N/A",
-                    Amount = amount
-                });
+                    if (processedPairs.Contains((debtorId, creditorId)) || processedPairs.Contains((creditorId, debtorId)))
+                    {
+                        continue;
+                    }
 
-                dList[dIdx] -= amount;
-                cList[cIdx] -= amount;
+                    decimal aOwesB = debts[debtorId][creditorId];
+                    decimal bOwesA = 0;
 
-                if (dList[dIdx] < 0.01m) dIdx++;
-                if (cList[cIdx] < 0.01m) cIdx++;
+                    if (debts.ContainsKey(creditorId) && debts[creditorId].ContainsKey(debtorId))
+                    {
+                        bOwesA = debts[creditorId][debtorId];
+                    }
+
+                    if (aOwesB > bOwesA)
+                    {
+                        decimal netDebt = aOwesB - bOwesA;
+                        if (netDebt > 0.01m)
+                        {
+                            settlements.Add(new SettlementDto
+                            {
+                                FromUserName = activeUsers.ContainsKey(debtorId) ? activeUsers[debtorId] : "N/A",
+                                ToUserName = activeUsers.ContainsKey(creditorId) ? activeUsers[creditorId] : "N/A",
+                                Amount = netDebt
+                            });
+                        }
+                    }
+                    else if (bOwesA > aOwesB)
+                    {
+                        decimal netDebt = bOwesA - aOwesB;
+                        if (netDebt > 0.01m)
+                        {
+                            settlements.Add(new SettlementDto
+                            {
+                                FromUserName = activeUsers.ContainsKey(creditorId) ? activeUsers[creditorId] : "N/A",
+                                ToUserName = activeUsers.ContainsKey(debtorId) ? activeUsers[debtorId] : "N/A",
+                                Amount = netDebt
+                            });
+                        }
+                    }
+
+                    processedPairs.Add((debtorId, creditorId));
+                }
             }
 
             return settlements;
+        }
+
+        public async Task SettleAllExpensesAsync(Guid groupId)
+        {
+            var expenses = await _context.Expenses
+                .Where(x => x.GroupId == groupId && !x.IsSettled)
+                .ToListAsync();
+
+            foreach (var expense in expenses)
+            {
+                expense.IsSettled = true;
+            }
+
+            await _context.SaveChangesAsync(default);
         }
     }
 }

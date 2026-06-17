@@ -158,6 +158,28 @@
         }
       }
     },
+    "/api/Expenses/settle": {
+      "post": {
+        "tags": [
+          "Expenses"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Expenses/{id}": {
       "delete": {
         "tags": [
@@ -516,13 +538,26 @@
             "type": "string",
             "format": "uuid"
           },
-          "participantIds": {
+          "splits": {
             "type": "array",
             "items": {
-              "type": "string",
-              "format": "uuid"
+              "$ref": "#/components/schemas/CreateExpenseSplitDto"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateExpenseSplitDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "owedAmount": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false

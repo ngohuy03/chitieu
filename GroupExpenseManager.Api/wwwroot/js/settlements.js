@@ -71,3 +71,28 @@ function renderSettlements(settlements) {
 function formatMoney(amount) {
     return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
 }
+
+function settleAll() {
+    const groupId = document.getElementById('groupSelect').value;
+    if (!groupId) {
+        alert("Vui lòng chọn nhóm trước.");
+        return;
+    }
+
+    if (!confirm("Bạn có chắc chắn muốn thanh toán và đưa các chi tiêu hiện tại vào lưu trữ không? Các khoản nợ sẽ trở về 0.")) {
+        return;
+    }
+
+    fetch(`/api/expenses/settle?groupId=${groupId}`, {
+        method: 'POST'
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Thanh toán thành công! Các chi tiêu đã được lưu trữ.");
+            loadSettlements();
+        } else {
+            alert("Có lỗi xảy ra khi thanh toán.");
+        }
+    })
+    .catch(error => console.error('Error settling expenses:', error));
+}

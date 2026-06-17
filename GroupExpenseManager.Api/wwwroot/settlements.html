@@ -181,7 +181,12 @@
         </header>
 
         <div class="main-content">
-            <h2 style="margin-top: 0; font-size: 1.3rem; color: var(--text-muted);">Thành tiền</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="margin: 0; font-size: 1.3rem; color: var(--text-muted);">Thành tiền</h2>
+                <button class="btn" style="background: #10b981; padding: 8px 16px; font-size: 0.9rem;" onclick="settleAll()">
+                    <i class="fa-solid fa-broom"></i> Thanh toán & Lưu trữ
+                </button>
+            </div>
 
             <div class="settlement-list" id="settlementList">
                 <div style="text-align: center; color: var(--text-muted); padding: 20px;">Vui lòng chọn nhóm để xem
@@ -190,7 +195,7 @@
         </div>
     </div>
 
-    <script src="/js/settlements.js"></script>
+    <script src="/js/settlements.js?v=2"></script>
 </body>
 
 </html>

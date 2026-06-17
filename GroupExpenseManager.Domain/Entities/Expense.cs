@@ -9,6 +9,7 @@ namespace GroupExpenseManager.Domain.Entities
         public string Title { get; set; } = string.Empty;
         public decimal Amount { get; set; }
         public DateTime Date { get; set; } = DateTime.UtcNow;
+        public bool IsSettled { get; set; } = false;
 
         // Foreign keys
         public Guid GroupId { get; set; }
