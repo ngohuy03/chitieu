@@ -28,7 +28,9 @@ namespace GroupExpenseManager.Application.Expenses
             {
                 Title = dto.Title,
                 Amount = dto.Amount,
-                Date = dto.Date,
+                Date = dto.Date.Kind == DateTimeKind.Unspecified 
+                    ? DateTime.SpecifyKind(dto.Date, DateTimeKind.Utc) 
+                    : dto.Date.ToUniversalTime(),
                 GroupId = dto.GroupId,
                 PaidById = dto.PaidById,
                 Splits = dto.Splits.Select(s => new ExpenseSplit
