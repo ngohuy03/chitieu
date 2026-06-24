@@ -2,7 +2,8 @@
 
 // State
 let currentGroupId = ""; // Should be set when a group is selected
-const apiUrl = "/api/expenses";
+const BASE_URL = "https://chitieu-6tl3.onrender.com";
+const apiUrl = `${BASE_URL}/api/expenses`;
 let currentItems = []; // Store items for the current expense session
 
 // Default to showing all expenses (date empty)
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadGroups() {
-    fetch('/api/groups')
+    fetch(`${BASE_URL}/api/groups`)
         .then(response => response.json())
         .then(data => {
             renderGroups(data);
@@ -47,7 +48,7 @@ function renderGroups(groups) {
 function loadUsersForSelect() {
     const select = document.getElementById('paidBy');
 
-    fetch('/api/users')
+    fetch(`${BASE_URL}/api/users`)
         .then(response => response.json())
         .then(data => {
             select.innerHTML = '<option value="">Chọn người trả</option>' +
@@ -59,7 +60,7 @@ function loadUsersForSelect() {
 function loadUsersForCheckboxes() {
     const container = document.getElementById('itemParticipantsList');
 
-    fetch('/api/users')
+    fetch(`${BASE_URL}/api/users`)
         .then(response => response.json())
         .then(data => {
             if (!data || data.length === 0) {

@@ -1,5 +1,7 @@
 // settlements.js
 
+const BASE_URL = "https://chitieu-6tl3.onrender.com";
+
 document.addEventListener('DOMContentLoaded', () => {
     loadGroupsForSelect();
 });
@@ -7,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadGroupsForSelect() {
     const select = document.getElementById('groupSelect');
     
-    fetch('/api/groups')
+    fetch(`${BASE_URL}/api/groups`)
         .then(response => response.json())
         .then(data => {
             select.innerHTML = '<option value="">Chọn Nhóm</option>' + 
@@ -32,7 +34,7 @@ function loadSettlements() {
 
     listContainer.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 20px;">Đang tính toán...</div>`;
 
-    fetch(`/api/expenses/settlements?groupId=${groupId}`)
+    fetch(`${BASE_URL}/api/expenses/settlements?groupId=${groupId}`)
         .then(response => response.json())
         .then(data => {
             renderSettlements(data);
@@ -83,7 +85,7 @@ function settleAll() {
         return;
     }
 
-    fetch(`/api/expenses/settle?groupId=${groupId}`, {
+    fetch(`${BASE_URL}/api/expenses/settle?groupId=${groupId}`, {
         method: 'POST'
     })
     .then(response => {

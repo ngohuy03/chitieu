@@ -1,6 +1,7 @@
 // users.js
 
-const apiUrl = "/api/users";
+const BASE_URL = "https://chitieu-6tl3.onrender.com";
+const apiUrl = `${BASE_URL}/api/users`;
 
 document.addEventListener('DOMContentLoaded', () => {
     loadUsers();

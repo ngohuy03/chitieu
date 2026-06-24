@@ -1,6 +1,7 @@
 // groups.js
 
-const apiUrl = "/api/groups";
+const BASE_URL = "https://chitieu-6tl3.onrender.com";
+const apiUrl = `${BASE_URL}/api/groups`;
 
 document.addEventListener('DOMContentLoaded', () => {
     loadGroups();
@@ -58,7 +59,7 @@ function renderGroups(groups) {
 function loadUsersForSelect() {
     const select = document.getElementById('contributorId');
     
-    fetch('/api/users')
+    fetch(`${BASE_URL}/api/users`)
         .then(response => response.json())
         .then(data => {
             select.innerHTML = '<option value="">Chọn người đóng góp</option>' + 
