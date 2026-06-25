@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|c:\\users\\lenovo\\onedrive\\documents\\api\\chitieu\\groupexpensemanager.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|solutionrelative:groupexpensemanager.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|c:\\users\\lenovo\\onedrive\\documents\\api\\chitieu\\groupexpensemanager.domain\\entities\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|solutionrelative:groupexpensemanager.domain\\entities\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,18 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|c:\\users\\lenovo\\onedrive\\documents\\api\\chitieu\\groupexpensemanager.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|solutionrelative:groupexpensemanager.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|c:\\users\\lenovo\\onedrive\\documents\\api\\chitieu\\groupexpensemanager.infrastructure\\migrations\\20260510023015_addisdeletetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|solutionrelative:groupexpensemanager.infrastructure\\migrations\\20260510023015_addisdeletetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|c:\\users\\lenovo\\onedrive\\documents\\api\\chitieu\\groupexpensemanager.infrastructure\\migrations\\20260509124829_updategroupentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|solutionrelative:groupexpensemanager.infrastructure\\migrations\\20260509124829_updategroupentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|c:\\users\\lenovo\\onedrive\\documents\\api\\chitieu\\groupexpensemanager.infrastructure\\migrations\\20260509121636_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85843ACD-C98B-4EB2-9D15-003A66C1F4DA}|GroupExpenseManager.Infrastructure\\GroupExpenseManager.Infrastructure.csproj|solutionrelative:groupexpensemanager.infrastructure\\migrations\\20260509121636_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{159A1326-D67C-440E-B4AE-A6755BDB4500}|GroupExpenseManager.Domain\\GroupExpenseManager.Domain.csproj|c:\\users\\lenovo\\onedrive\\documents\\api\\chitieu\\groupexpensemanager.domain\\entities\\expensesplit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,35 +57,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20260510023015_AddIsDeleteToUser.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260510023015_AddIsDeleteToUser.cs",
-              "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Migrations\\20260510023015_AddIsDeleteToUser.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260510023015_AddIsDeleteToUser.cs",
-              "RelativeToolTip": "GroupExpenseManager.Infrastructure\\Migrations\\20260510023015_AddIsDeleteToUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T12:14:34.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20260509124829_UpdateGroupEntity.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509124829_UpdateGroupEntity.cs",
-              "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Migrations\\20260509124829_UpdateGroupEntity.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509124829_UpdateGroupEntity.cs",
-              "RelativeToolTip": "GroupExpenseManager.Infrastructure\\Migrations\\20260509124829_UpdateGroupEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T12:14:33.746Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "GroupExpenseManager.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T12:12:26.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Expense.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\Expense.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Domain\\Entities\\Expense.cs",
@@ -101,12 +82,11 @@
               "RelativeToolTip": "GroupExpenseManager.Domain\\Entities\\Expense.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T12:14:21.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T12:14:21.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Group.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\Group.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Domain\\Entities\\Group.cs",
@@ -118,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Domain\\Entities\\User.cs",
@@ -130,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "ExpenseSplit.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Domain\\Entities\\ExpenseSplit.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Domain\\Entities\\ExpenseSplit.cs",
@@ -142,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "GroupAppService.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Application\\Groups\\GroupAppService.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Application\\Groups\\GroupAppService.cs",
@@ -154,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "IApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Application\\Interfaces\\IApplicationDbContext.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Application\\Interfaces\\IApplicationDbContext.cs",
@@ -166,19 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "20260509121636_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509121636_InitialCreate.cs",
-              "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Migrations\\20260509121636_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509121636_InitialCreate.cs",
-              "RelativeToolTip": "GroupExpenseManager.Infrastructure\\Migrations\\20260509121636_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T12:16:36.472Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "ExpenseAppService.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Application\\Expenses\\ExpenseAppService.cs",
@@ -190,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "20260509121333_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509121333_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\acer\\source\\repos\\ChiTieu\\GroupExpenseManager.Infrastructure\\Migrations\\20260509121333_InitialCreate.cs",
@@ -202,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Api\\appsettings.json",
               "RelativeDocumentMoniker": "GroupExpenseManager.Api\\appsettings.json",
@@ -214,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "groups.js",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
               "RelativeDocumentMoniker": "GroupExpenseManager.Api\\wwwroot\\js\\groups.js",
@@ -226,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documents\\API\\ChiTieu\\GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "GroupExpenseManager.Infrastructure\\Persistence\\ApplicationDbContext.cs",
