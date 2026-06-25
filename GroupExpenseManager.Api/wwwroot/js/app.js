@@ -2,7 +2,7 @@
 
 // State
 let currentGroupId = ""; // Should be set when a group is selected
-const BASE_URL = "https://chitieu-6tl3.onrender.com";
+const BASE_URL = window.location.origin;
 const apiUrl = `${BASE_URL}/api/expenses`;
 let currentItems = []; // Store items for the current expense session
 
