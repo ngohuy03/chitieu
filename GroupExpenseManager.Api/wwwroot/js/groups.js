@@ -1,6 +1,8 @@
 // groups.js
 
-const BASE_URL = window.location.origin;
+const BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && (window.location.port === '5249' || window.location.port === '7159')
+    ? window.location.origin
+    : (window.location.origin.startsWith('file://') || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:5249' : 'https://chitieu-6tl3.onrender.com');
 const apiUrl = `${BASE_URL}/api/groups`;
 
 document.addEventListener('DOMContentLoaded', () => {
